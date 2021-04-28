@@ -1,0 +1,40 @@
+body {
+	background-color: ;
+}
+
+html {
+	height: 100%;
+}
+
+.grid-container {
+	display: grid;
+
+	grid-template:
+		"a" 
+		"b" 
+		"c" ;
+}
+
+.div-1 {
+	grid-area: a;
+	background-color: hsl(31, 77%, 52%)
+}
+
+.div-2 {
+	grid-area: b;
+	background-color: hsl(184, 100%, 22%)
+}
+
+.div-3 {
+	grid-area: c;
+	background-color: hsl(179, 100%, 13%)
+}
+
+@media (max-width: 1440px) {
+	.grid-container {
+	display: grid;
+
+	grid-template:
+		"a" 100px "b" 100px "c" 100px;
+}
+}
