@@ -1,40 +1,118 @@
-body {
-	background-color: ;
-}
-
 html {
 	height: 100%;
 }
 
-.grid-container {
+body {
+	height: 100%;
+	background-color: hsl(0, 0%, 95%);
+	color: hsla(0, 0%, 100%, 0.75);
+	font-size: 15px;
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+
+.sedan {
+	background-color: hsl(31, 77%, 52%);
+	
+	border-radius: 10px 0px 0px 10px;
+}
+
+.sedan button {
+	color: hsl(31, 77%, 52%);
+	border-color: hsl(31, 77%, 52%);
+}
+
+.suv {
+	background-color: hsl(184, 100%, 22%);
+	
+}
+
+.suv button {
+	color: hsl(184, 100%, 22%);
+	border-color: hsl(184, 100%, 22%);
+}
+
+.luxury {
+	background-color: hsl(179, 100%, 13%);
+	
+	border-radius: 0px 10px 10px 0px;
+}
+
+.luxury button {
+	color: hsl(179, 100%, 13%);
+	border-color: hsl(179, 100%, 13%);
+}
+
+.grid-cars {
 	display: grid;
-
-	grid-template:
-		"a" 
-		"b" 
-		"c" ;
+	grid-template-columns: repeat(3, 20%);
+	justify-content: center;
+	align-content: center;
+	height: 100%;
+	
 }
 
-.div-1 {
-	grid-area: a;
-	background-color: hsl(31, 77%, 52%)
+article {
+	padding: 2rem;
+	font-family: 'Lexend Deca';
+	font-weight: 400;
+	font-size: 0.75rem;
 }
 
-.div-2 {
-	grid-area: b;
-	background-color: hsl(184, 100%, 22%)
+h1 {
+	font-family: 'Big Shoulders Display';
+	text-transform: uppercase;
+	font-size: 2rem;
+	font-weight: 700;
 }
 
-.div-3 {
-	grid-area: c;
-	background-color: hsl(179, 100%, 13%)
+button {
+	background-color: hsl(0, 0%, 95%);
+	border: solid;
+	border-color: inherit;
+	color: hsla(0,0%,100%,50%);
+	border-radius: 50px;
+	padding: 0.5rem 1rem ;
+	margin-top: 4rem;
 }
 
-@media (max-width: 1440px) {
-	.grid-container {
-	display: grid;
+button:hover {
+	background-color: inherit;
+	border: solid;
+	border-color: hsl(0, 0%, 95%);
+	border-radius: 50px;
+	color: inherit;
+	cursor: pointer;
+}
 
-	grid-template:
-		"a" 100px "b" 100px "c" 100px;
+/* 
+Cambios a la apariencia de teléfono
+*/
+
+@media (max-width: 375px) {
+	.grid-cars {
+		grid-template-columns: 95%;
+		grid-template-rows: auto, auto, auto;
+		height: auto;
+		margin-top: 5rem;
+		margin-bottom: 2rem;
+	}
+
+	.sedan {
+		border-radius: 10px 10px 0px 0px;
+	}
+
+	.luxury {
+		border-radius: 0px, 0px, 10pc, 10px;
+	}
+		
 }
 }
